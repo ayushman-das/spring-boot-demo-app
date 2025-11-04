@@ -5,9 +5,10 @@ phases:
     runtime-versions:
       java: latest
     commands:
-      - yum install -y maven
-      - yum install -y java-17-amazon-corretto-devel
-      - yum install zip -y
+      - apt update -y
+      - apt install -y maven
+      - apt install -y java-17-amazon-corretto-devel
+      - apt install zip -y
   build:
     commands:
       - mvn clean install
